@@ -1,0 +1,1 @@
+json.array! @allocated_times, partial: 'allocated_times/allocated_time', as: :allocated_time

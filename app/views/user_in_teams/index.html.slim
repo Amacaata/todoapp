@@ -1,0 +1,23 @@
+h1 Listing user_in_teams
+
+table
+  thead
+    tr
+      th User
+      th Team
+      th
+      th
+      th
+
+  tbody
+    - @user_in_teams.each do |user_in_team|
+      tr
+        td = user_in_team.user
+        td = user_in_team.team
+        td = link_to 'Show', user_in_team
+        td = link_to 'Edit', edit_user_in_team_path(user_in_team)
+        td = link_to 'Destroy', user_in_team, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New User in team', new_user_in_team_path

@@ -1,0 +1,31 @@
+h1 Listing allocated_times
+
+table
+  thead
+    tr
+      th Task
+      th User
+      th Done
+      th Start
+      th End
+      th Notes
+      th
+      th
+      th
+
+  tbody
+    - @allocated_times.each do |allocated_time|
+      tr
+        td = allocated_time.task
+        td = allocated_time.user
+        td = allocated_time.done
+        td = allocated_time.start
+        td = allocated_time.end
+        td = allocated_time.notes
+        td = link_to 'Show', allocated_time
+        td = link_to 'Edit', edit_allocated_time_path(allocated_time)
+        td = link_to 'Destroy', allocated_time, data: { confirm: 'Are you sure?' }, method: :delete
+
+br
+
+= link_to 'New Allocated time', new_allocated_time_path

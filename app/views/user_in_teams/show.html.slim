@@ -1,0 +1,12 @@
+p#notice = notice
+
+p
+  strong User:
+  = @user_in_team.user
+p
+  strong Team:
+  = @user_in_team.team
+
+= link_to 'Edit', edit_user_in_team_path(@user_in_team)
+'|
+= link_to 'Back', user_in_teams_path

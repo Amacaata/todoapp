@@ -1,0 +1,24 @@
+p#notice = notice
+
+p
+  strong Task:
+  = @allocated_time.task
+p
+  strong User:
+  = @allocated_time.user
+p
+  strong Done:
+  = @allocated_time.done
+p
+  strong Start:
+  = @allocated_time.start
+p
+  strong End:
+  = @allocated_time.end
+p
+  strong Notes:
+  = @allocated_time.notes
+
+= link_to 'Edit', edit_allocated_time_path(@allocated_time)
+'|
+= link_to 'Back', allocated_times_path

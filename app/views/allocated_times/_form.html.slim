@@ -1,0 +1,27 @@
+= form_for @allocated_time do |f|
+  - if @allocated_time.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@allocated_time.errors.count, "error")} prohibited this allocated_time from being saved:"
+      ul
+        - @allocated_time.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :task
+    = f.text_field :task
+  .field
+    = f.label :user
+    = f.text_field :user
+  .field
+    = f.label :done
+    = f.check_box :done
+  .field
+    = f.label :start
+    = f.datetime_select :start
+  .field
+    = f.label :end
+    = f.datetime_select :end
+  .field
+    = f.label :notes
+    = f.text_area :notes
+  .actions = f.submit

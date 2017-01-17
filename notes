@@ -1,0 +1,23 @@
+rails g scaffold User name:string
+rails g scaffold Team name:string
+rails g scaffold UserInTeam user:references team:references
+rails g scaffold Project name:string user:references team:references
+rails g scaffold Task title:string description:text user:references project:references deadline:date
+rails g scaffold AllocatedTime task:references user:references done:boolean start:datetime end:datetime notes:text
+
+rake db:migrate
+
+
+rails d scaffold User
+rails d scaffold Team
+rails d scaffold UserInTeam
+rails d scaffold Project
+rails d scaffold Task
+rails d scaffold AllocatedTime
+# smazat db/schema
+rake db:reset
+
+
+??rails g scaffold Comment project:references
+
+
