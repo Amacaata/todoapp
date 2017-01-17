@@ -3,6 +3,12 @@ p#notice = notice
 p
   strong Name:
   = @user.name
+p
+  strong Provider:
+  = @user.provider
+p
+  strong Uid:
+  = @user.uid
 
 = link_to 'Edit', edit_user_path(@user)
 '|

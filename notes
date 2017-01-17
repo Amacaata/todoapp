@@ -20,4 +20,24 @@ rake db:reset
 
 ??rails g scaffold Comment project:references
 
+GemFile
+===========
+gem 'slim-rails'
+gem 'simple_form'
+gem 'omniauth-google-oauth2'
+gem 'devise'#?
+gem 'cancan'
+gem 'rolify'
+gem 'exception_notification'
+gem 'better_errors'
+
+gem 'twitter-bootstrap-rails'
+gem 'redcarpet'#?
+
+gem 'letter_opener'#?
+
+gem 'paperclip' #?
+
+config/routes
+============
 

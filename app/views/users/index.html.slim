@@ -4,6 +4,8 @@ table
   thead
     tr
       th Name
+      th Provider
+      th Uid
       th
       th
       th
@@ -12,6 +14,8 @@ table
     - @users.each do |user|
       tr
         td = user.name
+        td = user.provider
+        td = user.uid
         td = link_to 'Show', user
         td = link_to 'Edit', edit_user_path(user)
         td = link_to 'Destroy', user, data: { confirm: 'Are you sure?' }, method: :delete
